@@ -12,7 +12,7 @@ export default function Home() {
     const handleSubmit = async () => {
         try {
             const jsonData = JSON.parse(input);
-            const res = await axios.post('http://localhost:3000/bfhl', jsonData);
+            const res = await axios.post('https://bajaj-api-n7tg.onrender.com/bfhl', jsonData);
             setResponse(res.data);
             setError(null);
         } catch (err) {
@@ -22,7 +22,7 @@ export default function Home() {
 
     const handleGetRequest = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/bfhl');
+            const res = await axios.get('https://bajaj-api-n7tg.onrender.com/bfhl');
             setGetResponse(res.data);
             setError(null);
         } catch (err) {
